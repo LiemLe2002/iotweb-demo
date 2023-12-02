@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/style.css">
+    <title>Smart Store</title>
+</head>
+<body>
+ 
+
+    <div id="body">  
+        <div id="header">
+            <h1 class="header-title">ỨNG DỤNG IOT VÀO TRỒNG LAN</h1>
+         </div>
+        <!--Body-->
+        <div class="body-content">
+            <div class="item">
+                
+                <div class="item-boder">
+                    <div class="item-list">
+                        <h2 class="item-title">TEMPERATURE</h2>
+                     <img src="asset/img/temperature.png" alt="temperature" class="item-img">
+                     <h3 id="tem"></h3>
+                    </div>
+                     <div class="item-list">
+                     <h2 class="item-title">SOIL MOISTURE</h2>
+                     <img src="asset/img/humi.png" alt="HUMIDITY" class="item-img">
+                     <h3 id="humi"></h3>
+                    </div>
+                    <div class="item-list">
+                        <h2 class="item-title">LIGHT</h2>
+                        <img src="asset/img/light.png" alt="LIGHT" class="item-img">
+                        <h3 id="light"></h3>
+                    </div>
+                    
+                </div>
+              
+            </div>
+            <div class="item-control">
+                <div class="control-boder">
+                    <div class="control-list">   
+                        <h2 class="control-title"> MOTOR1 </h2>
+                        <img src="asset/img/motoroff.png" alt="" class="control-img" id="motor1">
+                        <!--<h2 class="control-title"> AUTO_TEMP </h2>-->
+                        <div class="btn">
+                            <h2 class="control-title"> AUTO_TEMP </h2>
+                            <button type="button" id="motor1on">ON</button>
+                            <button type="button" id="motor1off">OFF</button>
+                          </div>
+                         
+                    </div>
+                    <div class="control-list">   
+                        <h2 class="control-title"> MOTOR2 </h2>
+                        <img src="asset/img/motoroff.png" alt="" class="control-img" id="motor2">
+                        <!--<h2 class="control-title" id="motor2_state"> MOTOR2 OFF</h2>-->
+                        <div class="btn">
+                            <h2 class="control-title"> AUTO_SOIL </h2>
+                            <button type="button" id="motor2on">ON</button>
+                            <button type="button" id="motor2off">OFF</button>
+                          </div>
+                    </div>
+                    <div class="control-list">   
+                        <h2 class="control-title">CẢNH BÁO</h2>
+                        <img src="asset/img/alarmoff.png" alt="" class="control-img" id="air">
+                        <!--<h2 class="control-title">PIR</h2>-->
+                        <div class="btn">
+                            <h2 class="control-title">PIR</h2>
+                            <button type="button"  id="airon">ON</button>
+                            <button type="button" id="airoff">OFF</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-setup">
+                <div class="setup-border">
+                    <div class="setup-list">
+                        <h4 style="font-size: 14px;">CÀI ĐẶT NHIỆT ĐỘ</h4>
+                        <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="temprange">
+                        <p style="font-size: 14px;"><b>TEMPERATURE SETUP: <span id="tempsetup"></span></b></p></div>
+                    </div>
+                    <div class="setup-list">
+                        <h4  style="font-size: 14px;">CÀI ĐẶT ĐỘ ẨM ĐẤT</h4>
+                        <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="soilrange">
+                        <p style="font-size: 14px;"><b>SOIL MOISTURE SETUP: <span id="soilsetup"></span></b></p></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--End Body-->
+            <!--Footer-->
+            <div class="footer">
+                    <div class="menber">
+                        <div class="menber-list">
+                            <img src="asset/img/liem.jpg" alt="" class="menber-img">
+                            <h2 class="menber-name"> Lê Thành Liêm 20161221 <br> Email: liemle897@gmail.com </h2>  
+                        </div>
+                        <div class="menber-list">
+                            <img src="asset/img/Phúc.jpg" alt="" class="menber-img">
+                            <h2 class="menber-name"> Lê Hữu Phúc 20161243 <br> Email: lehuuphuc0509@gmail.com</h2> 
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        <!--End Footer-->
+        <!--Function-->
+        
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+        <!--<script>
+            // Import the functions you need from the SDKs you need
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCGa35E1fy2ht5dqv9ApeVPmwiPZ9ReMmk",
+              authDomain: "iotapp-7a482.firebaseapp.com",
+              projectId: "iotapp-7a482",
+              storageBucket: "iotapp-7a482.appspot.com",
+              messagingSenderId: "751576364704",
+              appId: "1:751576364704:web:06c25d5d5374e333b67bc5",
+              measurementId: "G-Q0NFR2QHEN"
+            };
+          
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+
+            var nhietDo = document.getElementById('tem');
+            var dbRef = firebase.database().ref().child('Nhiet do');
+            var doAm = document.getElementById('humi');
+            var dbRef2 = firebase.database().ref().child('Do am');
+            dbRef.on('value', snap => nhietDo.innerText = snap.val());
+            dbRef2.on('value', snap => doAm.innerText = snap.val());
+          </script> -->
+        
+        
+        <!--Encd connetion with FireBase--> 
+        <script src="asset/IOT.js"></script>
+        <!--End Function--> 
+        
+    </div>
+ 
+ 
+ 
+ 
+</body>
+</html>

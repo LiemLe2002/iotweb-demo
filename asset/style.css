@@ -1,0 +1,251 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+    
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+	width: 100%;
+    background-image: url(/asset/img/background.jpg);
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#header{
+	
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+	background-color: aquamarine;
+    
+}
+#header .header-title{
+	
+    
+    padding-top: 0px;
+	padding-bottom: 5px;
+    text-align: center;
+    color: rgb(151, 108, 27);
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: .15em;
+}
+
+/* Body*/
+
+#body .body-content{
+    width: 100%;
+    position: absolute;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    
+}
+#body .item{
+ /*Khoang cach giua body va header*/
+    width: 100%;
+    height: 170px;
+    padding-left:  16%;
+    /*background-color: cornflowerblue;*/
+}
+/*item list*/
+h3{
+    padding-top: 5%;
+}
+h2{
+     padding-bottom: 2%;
+}
+h4{
+    padding-top: 2%;
+}
+#body .item-boder{
+    height: 100%;
+    width: 80%;
+    background-color:#FFEBC6;
+}
+
+#body .item-list{
+
+    height: 100%;
+    width: calc(100%/3);
+    border-radius: 8%;
+    border-style: groove;
+    float: left;
+    align-items: center;
+    text-align: center;
+    
+}
+#body .item-img{
+    height: 60%;
+    width: 40%;
+    object-fit: cover;
+    
+
+}
+#body .item-title{
+    text-shadow: 0.1rem;
+    font-size: 170%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#tem{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#humi{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#light{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*End Item-list*/
+/*COntrol list*/
+button{
+    height: 50%;
+    width: 40%;
+    border-radius: 100px;
+
+}
+button:hover{
+    background-color: rgb(151, 97, 97);
+}
+#body .item-control{
+    
+    width: 100%;
+    height:230px ;
+    width: 100%;
+    
+    padding-left: 16%;
+    /*background-color: rgb(100, 105, 95);*/
+}
+#body .control-boder{
+    height: 100%;
+    width: 80%;
+    background-color: #bebee2;
+    
+}
+
+#body .control-list{
+    height: 67%;
+    width: calc(100%/3);
+    border-radius: 8%;
+    border-style: groove;
+    float: left;
+    align-items: center;
+    text-align: center;
+    
+}
+#body .control-title{
+    font-size: 16px;
+    text-align: center;
+}
+#body .control-img{
+    height: 50%;
+    width: 40%;
+    object-fit: cover;
+}
+
+#body .btn{
+    margin-top: 12%;
+    padding-top: 2%;
+    height: 60%;
+    width: 100%;
+    border-style: groove;
+    border-radius: 2%;
+    background-color: rgb(31, 92, 133);
+}
+#body .item-setup{
+    height: 90px;
+    width: 100%;
+    padding-left: 16%;
+    margin-top: 0.5%;
+}
+#body .setup-border{
+    height: 100%;
+    width: 80%;
+    background-color: #bebee2;
+}
+#body .setup-list{
+    height: 90%;
+    width: calc(100%/2);
+    border-radius: 8%;
+    border-style: groove;
+    float: left;
+    align-items: center;
+    text-align: center;
+}
+#body .slidecontainer{
+    width: 100%;
+}
+#body .slider {
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+  }
+ #body .slider:hover {
+    opacity: 1; /* Hiển thị đầy đủ khi di chuột qua */
+  }
+ #body .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Ghi đè giao diện mặc định */
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background:#4CAF50;
+    cursor: pointer;
+  } 
+  #body .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+/*End control-list*/
+/*Footer*/
+#body .footer{
+    height: 150px;
+    width: 100%;
+    padding-left: 16%;
+    margin-top: 0.1%;
+}
+
+#body .menber{
+    
+    height: 100%;
+    width: 80%;
+    background-color: #393981;
+}
+#body .menber-list{
+    height: 90%;
+    width: calc(100%/2);
+    border-radius: 8%;
+    border-style: groove;
+    float: left;
+    display: flex;
+    align-items: center;
+
+}
+#body .menber-img{
+    height: 90%;
+    width: 20%;
+    object-fit: cover;
+    border-radius: 30%;
+    padding-right: 1%;
+    
+}
+
+
+
+
+/*End Footer*/
