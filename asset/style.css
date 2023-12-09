@@ -11,7 +11,7 @@ html {
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 	width: 100%;
-    background-image: url(/asset/img/background.jpg);
+        background-color:#111355;
     height: 100%; 
 
     /* Center and scale the image nicely */
