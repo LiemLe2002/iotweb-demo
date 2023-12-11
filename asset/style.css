@@ -249,3 +249,116 @@ button:hover{
 
 
 /*End Footer*/
+@media only screen and (max-width: 46.1875em) {
+        
+    #header{
+        margin-bottom: 5px;
+    }
+    #header .header-title {
+        
+        padding-top: 15px;
+		font-size: 1.5rem;
+    }
+    
+    #body .item {
+        
+        height: 170px;
+        padding-left: 0%;
+        margin-bottom: 5px;
+        }
+    #body .item {
+        height: 170px;
+        padding-left: 0%;
+        
+        /* background-color: cornflowerblue; */
+    }
+    #body .item-boder {
+        height: 100%;
+        width: 100%;
+
+        background-color: #FFEBC6;
+    }
+    #body .item-title {
+        text-shadow: 0.1rem;
+        font-size: 130%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #body .item-img {
+        height: 60%;
+        width: 60%;
+        object-fit: cover;
+    }
+    #tem {
+        font-size: 170%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #humi {
+        font-size: 170%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #light {
+        font-size: 170%;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #body .item-control {
+        width: 100%;
+        height: 230px;
+        width: 100%;
+        padding-left: 0%;
+        margin-bottom: 5px;
+       
+        /* background-color: rgb(100, 105, 95); */
+    }
+    #body .control-boder {
+        height: 100%;
+        width: 100%;
+        background-color: #bebee2;
+        
+    }
+    #body .control-title {
+        font-size: 170%;
+        text-align: center;
+    }
+    #body .control-img {
+        height: 50%;
+        width: 40%;
+        object-fit: cover;
+    }
+    
+    #body .item-setup {
+        height: 90px;
+        width: 100%;
+        padding-left: 0%;
+        margin-top: 0.5%;
+        margin-bottom: 5px;
+    }
+    #body .setup-border {
+        height: 100%;
+        width: 100%;
+        background-color: #bebee2;
+    }
+    #body .footer {
+        height: 150px;
+        width: 100%;
+        padding-left: 0%;
+        margin-top: 0.1%;
+    }
+    #body .menber {
+        height: 100%;
+        width: 100%;
+        background-color: #393981;
+    }
+    #body .menber-img {
+        height: 90%;
+        width: 30%;
+        object-fit: cover;
+        border-radius: 30%;
+        padding-right: 1%;
+    }
+    .menber-name{
+        font-size: 98%;
+
+    }
+    
+}
+
